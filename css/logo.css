@@ -2,6 +2,7 @@
     text-align: center;
     box-shadow: 0 0px 8px grey;
     padding: 25px;
+    position: relative;
 }
 
 #logo img{
