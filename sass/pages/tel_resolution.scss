@@ -1,0 +1,9 @@
+@media (max-width: 957px) {
+    .fonctionnement ol{
+        flex-direction: column;
+    }
+    
+    .menu__carte{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

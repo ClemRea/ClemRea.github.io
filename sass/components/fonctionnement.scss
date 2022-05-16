@@ -4,6 +4,7 @@
 
 .fonctionnement{
     counter-reset: etapes;
+    margin-bottom: 80px;
     & ol{
         display: flex;
         gap: 32px;
@@ -38,11 +39,6 @@
     &_i{
         margin-right: 16px;
         color: rgb(131, 131, 131);
-        font-size: 20px;
-    }
-    &_i--modifier{
-        margin-right: 16px;
-        color: #9356DC;
         font-size: 20px;
     }
     & h2{

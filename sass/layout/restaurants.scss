@@ -1,0 +1,27 @@
+@use "../utils/variable.scss";
+
+.menu{
+    background-color: variable.$couleur_fond;
+
+    &__carte{
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    
+    h2{
+        margin-bottom: 32px;
+        padding: 25px 0 0 25px;
+    }
+
+    .restaurant{
+        &__img{
+            background-image: url("../../images/restaurants/menu1.jpg");
+            background-size: cover;
+            border-radius: 16px;
+            height: 15rem;
+        }
+        
+    }
+}

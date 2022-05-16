@@ -6,7 +6,7 @@
 }
 
 main {
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 #logo {
@@ -73,6 +73,7 @@ main {
 
 .fonctionnement {
   counter-reset: etapes;
+  margin-bottom: 80px;
 }
 .fonctionnement ol {
   display: flex;
@@ -112,18 +113,36 @@ main {
   color: rgb(131, 131, 131);
   font-size: 20px;
 }
-.fonctionnement_i--modifier {
-  margin-right: 16px;
-  color: #9356DC;
-  font-size: 20px;
-}
 .fonctionnement h2 {
   margin-bottom: 35px;
 }
 
-@media (max-width: 875px) {
+.menu {
+  background-color: rgba(241, 241, 241, 0.945);
+}
+.menu__carte {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.menu h2 {
+  margin-bottom: 32px;
+  padding: 25px 0 0 25px;
+}
+.menu .restaurant__img {
+  background-image: url("../../images/restaurants/menu1.jpg");
+  background-size: cover;
+  border-radius: 16px;
+  height: 15rem;
+}
+
+@media (max-width: 957px) {
   .fonctionnement ol {
     flex-direction: column;
+  }
+
+  .menu__carte {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
