@@ -1,0 +1,9 @@
+@mixin box_shadow {
+    box-shadow: 0 3px 16px -4px black;
+}
+
+@mixin hover {
+    transform: scale(1.02);
+    transition: all 0.2s;
+    cursor: pointer;
+}

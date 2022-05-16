@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "P3 Openclassrooms ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClemRea/ohmyfood.git"
+  },
+  "author": "REA Clément",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClemRea/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/ClemRea/ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}
