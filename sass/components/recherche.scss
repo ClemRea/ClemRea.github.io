@@ -1,3 +1,5 @@
+@use "..//utils/variable.scss";
+
 .recherche{
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -24,7 +26,7 @@
     box-shadow: 0 3px 16px -4px black;
     transition: all 0.2s;
     border: none;
-    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    background-image: linear-gradient(to top, variable.$couleur_primaire, variable.$couleur_secondaire);
 }
 
 .btn_explorez:hover{
