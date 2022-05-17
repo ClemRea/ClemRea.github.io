@@ -9,6 +9,11 @@ main {
   padding: 0 40px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #logo {
   text-align: center;
   box-shadow: 0 0px 8px grey;
@@ -119,24 +124,106 @@ main {
 
 .menu {
   background-color: rgba(241, 241, 241, 0.945);
+  margin-bottom: 32px;
+  border-radius: 16px;
 }
 .menu__carte {
   display: grid;
-  gap: 32px;
+  gap: 25px;
   grid-template-columns: repeat(2, 1fr);
+  padding: 16px;
+}
+.menu__carte .nouveau {
+  position: relative;
+}
+.menu__carte .nouveau::before {
+  content: "Nouveau";
+  position: absolute;
+  background-color: #99E2D0;
+  font-size: 15px;
+  padding: 7px;
+  color: #1b6150;
+  font-weight: 600;
+  border-radius: 3px;
+  right: 9px;
+  top: 10px;
 }
 .menu h2 {
   margin-bottom: 32px;
   padding: 25px 0 0 25px;
 }
-.menu .restaurant__img {
-  background-image: url("../../images/restaurants/menu1.jpg");
-  background-size: cover;
+.menu .restaurant {
+  background-color: white;
   border-radius: 16px;
+  overflow: hidden;
+}
+.menu .restaurant__img {
+  background-size: cover;
   height: 15rem;
+}
+.menu .restaurant__img1 {
+  background-image: url("../../images/restaurants/menu1.jpg");
+}
+.menu .restaurant__img2 {
+  background-image: url("../../images/restaurants/menu2.jpg");
+}
+.menu .restaurant__img3 {
+  background-image: url("../../images/restaurants/menu3.jpg");
+}
+.menu .restaurant__img4 {
+  background-image: url("../../images/restaurants/menu4.jpg");
+}
+.menu .restaurant__description {
+  position: relative;
+}
+.menu .restaurant__description h3, .menu .restaurant__description p {
+  margin: 8px;
+}
+.menu .restaurant__description h3 {
+  padding-top: 8px;
+  font-size: 22px;
+}
+.menu .restaurant__description p {
+  font-size: 17px;
+}
+.menu .restaurant__description i {
+  position: absolute;
+  font-size: 26px;
+  right: 16px;
+  bottom: 11px;
+}
+
+footer {
+  color: white;
+  background-color: rgb(51, 51, 51);
+  padding: 24px 32px;
+}
+footer h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+footer a {
+  display: flex;
+  cursor: pointer;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer .fa-utensils {
+  margin-right: 10px;
+}
+footer .fa-handshake-angle {
+  margin-right: 10px;
 }
 
 @media (max-width: 957px) {
+  main {
+    padding: 16px;
+  }
+
   .fonctionnement ol {
     flex-direction: column;
   }

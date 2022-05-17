@@ -1,0 +1,29 @@
+@use "../utils/variable.scss";
+
+footer{
+    color: white;
+    background-color: variable.$couleur_footer;
+    padding: 24px 32px;
+    
+    h2{
+        font-family: 'Shrikhand', sans-serif;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    a{
+        display: flex;
+        cursor: pointer;
+        font-size: 17px;
+        margin-bottom: 10px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    
+    .fa-utensils{
+        margin-right: 10px;
+    }
+    .fa-handshake-angle{
+        margin-right: 10px;
+    }
+}
