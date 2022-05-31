@@ -5,6 +5,7 @@
 .fonctionnement{
     counter-reset: etapes;
     margin-bottom: 80px;
+    font-family: 'Roboto', sans-serif;
     & ol{
         display: flex;
         gap: 32px;
@@ -16,10 +17,13 @@
         border-radius: 16px;
         list-style-type: none;
         position: relative;
+        font-weight: 600;
+        font-size: 17px;
         @include mixin.box-shadow;
         &:hover{
             @include mixin.hover;
             cursor: pointer;
+            background-color:variable.$couleur_hover
         }
         &::before{
             content: counter(etapes);

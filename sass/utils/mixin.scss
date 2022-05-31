@@ -1,3 +1,5 @@
+@use "./variable.scss";
+
 @mixin box_shadow {
     box-shadow: 0 3px 16px -4px black;
 }
@@ -6,4 +8,18 @@
     transform: scale(1.02);
     transition: all 0.2s;
     cursor: pointer;
+}
+
+@mixin coeur_animation {
+    color: transparent;
+    background-image:linear-gradient(variable.$couleur_primaire, variable.$couleur_secondaire);
+    opacity: 0;
+    -webkit-background-clip: text;
+    transition: ease-out 0.2s;
+    position: absolute;
+    font-size: 26px;
+    &:hover{
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }

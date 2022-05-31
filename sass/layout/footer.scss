@@ -13,8 +13,9 @@ footer{
     a{
         display: flex;
         cursor: pointer;
-        font-size: 17px;
+        font-size: 16px;
         margin-bottom: 10px;
+        font-family: 'Roboto', sans-serif;
         &:hover{
             text-decoration: underline;
         }

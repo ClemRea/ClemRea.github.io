@@ -1,0 +1,42 @@
+@use "../utils/variable.scss";
+@use '../utils/mixin.scss';
+
+
+.like_barre{
+    position: relative;
+    border-radius: 32px 32px 0 0;
+    background-color: variable.$couleur_fond;
+    i{
+        position: absolute;
+        font-size: 26px;
+        right: 16px;
+        bottom: 36px;
+    }
+}
+
+.resto_titre{
+    font-family: 'Shrikhand',sans-serif;
+    padding: 32px 16px;
+}
+.resto_img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    margin-bottom: -30px;
+}
+
+
+.fa-solid.fa-heart{
+    @include mixin.coeur_animation;
+}
+
+.menu__global{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 16px;
+    gap: 16px;
+    background-color: variable.$couleur_fond;
+    & > *{
+        border: 1px solid red;
+    }
+}
