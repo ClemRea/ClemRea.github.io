@@ -1,78 +1,80 @@
 @use "../utils/variable.scss";
 @use "../utils/mixin.scss";
 
-.menu{
+#homepage {
+  .menu {
     background-color: variable.$couleur_fond;
     margin-bottom: 32px;
     border-radius: 16px;
-    font-family: 'Roboto', sans-serif;
-    &__carte{
-        display: grid;
-        gap: 25px;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 16px;
+    font-family: "Roboto", sans-serif;
+    &__carte {
+      display: grid;
+      gap: 25px;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 16px;
 
-        .nouveau{
-            position: relative;
-        }
-        .nouveau::before{
-            content: "Nouveau";
-            position: absolute;
-            background-color: variable.$couleur_tertiaire;
-            font-size: 15px;
-            padding: 7px;
-            color: darken(variable.$couleur_tertiaire, 50%);
-            font-weight: 600;
-            border-radius: 3px;
-            right: 9px;
-            top: 10px;
-        }
-    }
-    
-    h2{
-        margin-bottom: 32px;
-        padding: 25px 0 0 25px;
-    }
-
-    .restaurant{
-        background-color: white;
-        border-radius: 16px;
-        overflow: hidden;
-        @include mixin.box-shadow;
-        &__img{
-            background-size: cover;
-            height: 15rem;
-        }
-        @for $i from 1 through 4{
-            &__img#{$i}{
-                background-image: url("../../images/restaurants/menu#{$i}.jpg");
-            }
-            
-        }
-    &__description{
+      .nouveau {
         position: relative;
-        h3, p{
-            margin: 8px;
-        }
-
-        h3{
-            padding-top: 8px;
-            font-size: 22px;
-        }
-
-        p{
-            font-size: 17px;
-        }
-
-        i{
-            position: absolute;
-            font-size: 26px;
-            right: 16px;
-            bottom: 11px;
-        }
-        .fa-solid.fa-heart{
-            @include mixin.coeur_animation
-        }
+      }
+      .nouveau::before {
+        content: "Nouveau";
+        position: absolute;
+        background-color: variable.$couleur_tertiaire;
+        font-size: 15px;
+        padding: 7px;
+        color: darken(variable.$couleur_tertiaire, 50%);
+        font-weight: 600;
+        border-radius: 3px;
+        right: 9px;
+        top: 10px;
+      }
     }
+
+    h2 {
+      margin-bottom: 32px;
+      padding: 25px 0 0 25px;
     }
+
+    .restaurant {
+      background-color: white;
+      border-radius: 16px;
+      overflow: hidden;
+      @include mixin.box-shadow;
+      &__img {
+        background-size: cover;
+        height: 15rem;
+      }
+      @for $i from 1 through 4 {
+        &__img#{$i} {
+          background-image: url("../../images/restaurants/menu#{$i}.jpg");
+        }
+      }
+      &__description {
+        position: relative;
+        h3,
+        p {
+          margin: 8px;
+        }
+
+        h3 {
+          padding-top: 8px;
+          font-size: 22px;
+        }
+
+        p {
+          font-size: 17px;
+        }
+
+        i {
+          position: absolute;
+          font-size: 26px;
+          right: 16px;
+          bottom: 11px;
+        }
+        .fa-solid.fa-heart {
+          @include mixin.coeur_animation;
+        }
+      }
+    }
+  }
 }

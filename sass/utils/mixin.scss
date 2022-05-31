@@ -1,25 +1,49 @@
 @use "./variable.scss";
 
 @mixin box_shadow {
-    box-shadow: 0 3px 16px -4px black;
+  box-shadow: 0 3px 16px -4px black;
+}
+
+@mixin box_shadow_plats {
+  box-shadow: 2px 3px 5px -4px black;
 }
 
 @mixin hover {
-    transform: scale(1.02);
-    transition: all 0.2s;
-    cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
 @mixin coeur_animation {
-    color: transparent;
-    background-image:linear-gradient(variable.$couleur_primaire, variable.$couleur_secondaire);
-    opacity: 0;
-    -webkit-background-clip: text;
-    transition: ease-out 0.2s;
-    position: absolute;
-    font-size: 26px;
-    &:hover{
-        opacity: 1;
-        transform: scale(1.1);
+  color: transparent;
+  background-image: linear-gradient(
+    variable.$couleur_primaire,
+    variable.$couleur_secondaire
+  );
+  opacity: 0;
+  -webkit-background-clip: text;
+  transition: ease-out 0.2s;
+  position: absolute;
+  font-size: 26px;
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@mixin check_spin {
+  @keyframes check_spin {
+    0% {
+      transform: rotate(-270deg);
     }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+@mixin overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

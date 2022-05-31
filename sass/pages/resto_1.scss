@@ -1,42 +1,92 @@
 @use "../utils/variable.scss";
-@use '../utils/mixin.scss';
+@use "../utils/mixin.scss";
 
+.like_barre {
+  position: relative;
+  border-radius: 32px 32px 0 0;
+  background-color: variable.$couleur_fond;
+  i {
+    position: absolute;
+    font-size: 26px;
+    right: 16px;
+    bottom: 36px;
+  }
+}
 
-.like_barre{
-    position: relative;
-    border-radius: 32px 32px 0 0;
-    background-color: variable.$couleur_fond;
-    i{
-        position: absolute;
-        font-size: 26px;
-        right: 16px;
-        bottom: 36px;
+.resto_titre {
+  font-family: "Shrikhand", sans-serif;
+  padding: 32px 16px;
+}
+.resto_img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  margin-bottom: -30px;
+}
+
+.fa-solid.fa-heart {
+  @include mixin.coeur_animation;
+}
+
+.menu1 {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 16px;
+  gap: 16px;
+  background-color: variable.$couleur_fond;
+  overflow: hidden;
+  &__indiv {
+    background-color: white;
+    cursor: pointer;
+    border-radius: 16px;
+    overflow: hidden;
+    @include mixin.box_shadow_plats;
+
+    &:hover {
+      .menu1__hover {
+        margin-right: 0;
+      }
+      .fa-solid.fa-check {
+        @include mixin.check_spin;
+        animation: check_spin 0.7s ease;
+      }
     }
-}
+  }
+  &__item {
+    display: flex;
+  }
+  &__prix {
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+    font-weight: 500;
+    padding: 16px;
+  }
+  &__description {
+    padding: 16px;
+    @include mixin.overflow;
 
-.resto_titre{
-    font-family: 'Shrikhand',sans-serif;
-    padding: 32px 16px;
-}
-.resto_img{
-    width: 100%;
-    height: 60vh;
-    object-fit: cover;
-    margin-bottom: -30px;
-}
+    h4,
+    p {
+      @include mixin.overflow;
+    }
+  }
 
-
-.fa-solid.fa-heart{
-    @include mixin.coeur_animation;
-}
-
-.menu__global{
+  &__hover {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0 16px;
-    gap: 16px;
-    background-color: variable.$couleur_fond;
-    & > *{
-        border: 1px solid red;
-    }
+    place-items: center;
+    background-color: variable.$couleur_tertiaire;
+    margin-right: variable.$menu_hover_margin;
+    width: variable.$menu_hover_width;
+    border-radius: 0 16px 16px 0;
+    transition: all 0.5s;
+    flex-shrink: 0;
+  }
+  .fa-solid.fa-check {
+    color: variable.$couleur_tertiaire;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50px;
+  }
 }
