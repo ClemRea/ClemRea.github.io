@@ -47,3 +47,30 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+@mixin boutton {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  height: 65px;
+  border-radius: 50px;
+  padding: 16px 32px;
+  transition: all 0.2s;
+  border: none;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  &:hover {
+    opacity: 0.95;
+    transform: scale(1.02);
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+}
+
+@keyframes apparition {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

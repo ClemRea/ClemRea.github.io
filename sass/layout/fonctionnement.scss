@@ -1,51 +1,50 @@
 @use "../utils/mixin.scss";
 @use "../utils/variable.scss";
 
-
-.fonctionnement{
-    counter-reset: etapes;
-    margin-bottom: 80px;
-    font-family: 'Roboto', sans-serif;
-    & ol{
-        display: flex;
-        gap: 32px;
+.fonctionnement {
+  counter-reset: etapes;
+  margin-bottom: 80px;
+  font-family: "Roboto", sans-serif;
+  & ol {
+    display: flex;
+    gap: 32px;
+  }
+  & li {
+    background-color: #f5f5f5;
+    padding: 20px 32px;
+    flex-grow: 1;
+    border-radius: 16px;
+    list-style-type: none;
+    position: relative;
+    font-weight: 600;
+    font-size: 17px;
+    transition: all 0.2s;
+    @include mixin.box-shadow;
+    &:hover {
+      @include mixin.hover;
+      background-color: variable.$couleur_hover;
     }
-    & li{
-        background-color: #f5f5f5;
-        padding: 20px 32px;
-        flex-grow: 1;
-        border-radius: 16px;
-        list-style-type: none;
-        position: relative;
-        font-weight: 600;
-        font-size: 17px;
-        @include mixin.box-shadow;
-        &:hover{
-            @include mixin.hover;
-            cursor: pointer;
-            background-color:variable.$couleur_hover
-        }
-        &::before{
-            content: counter(etapes);
-            display: grid;
-            counter-increment: etapes;
-            background-color: variable.$couleur_primaire;
-            color: white;
-            width: 35px;
-            height: 35px;
-            place-items: center;
-            border-radius: 50px;
-            position: absolute;
-            left: -15px;
-            top: 14px;
-        }
+    &::before {
+      content: counter(etapes);
+      display: grid;
+      counter-increment: etapes;
+      background-color: variable.$couleur_primaire;
+      color: white;
+      width: 35px;
+      height: 35px;
+      place-items: center;
+      border-radius: 50px;
+      position: absolute;
+      left: -15px;
+      top: 14px;
     }
-    &_i{
-        margin-right: 16px;
-        color: rgb(131, 131, 131);
-        font-size: 20px;
-    }
-    & h2{
-        margin-bottom: 35px;
-    }
+  }
+  &_i {
+    margin-right: 16px;
+    color: rgb(131, 131, 131);
+    font-size: 20px;
+  }
+  & h2 {
+    margin-bottom: 35px;
+  }
 }

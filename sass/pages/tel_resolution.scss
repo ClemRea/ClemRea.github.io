@@ -1,13 +1,16 @@
-@media (max-width: 957px) {
-    .accueil__main{
-        padding: 16px;
-    }
+@media (max-width: 768px) {
+  .accueil__main {
+    padding: 16px;
+  }
 
-    .fonctionnement ol{
-        flex-direction: column;
-    }
-    
-    .menu1{
-        grid-template-columns: 1fr;
-    }
+  .fonctionnement ol {
+    flex-direction: column;
+  }
+
+  .menu__carte {
+    grid-template-columns: 1fr;
+  }
+  .menu1 {
+    grid-template-columns: 1fr;
+  }
 }

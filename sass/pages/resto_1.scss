@@ -1,6 +1,26 @@
 @use "../utils/variable.scss";
 @use "../utils/mixin.scss";
 
+.resto1_main {
+  background-color: variable.$couleur_fond;
+}
+
+.retour {
+  position: relative;
+  .fa-solid.fa-arrow-left {
+    position: absolute;
+    font-size: 30px;
+    color: variable.$couleur_fleche;
+    left: 36px;
+    top: -64px;
+    transition: all 0.4s;
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.4s;
+    }
+  }
+}
+
 .like_barre {
   position: relative;
   border-radius: 32px 32px 0 0;
@@ -16,6 +36,8 @@
 .resto_titre {
   font-family: "Shrikhand", sans-serif;
   padding: 32px 16px;
+  font-size: 30px;
+  font-weight: 500;
 }
 .resto_img {
   width: 100%;
@@ -26,6 +48,7 @@
 
 .fa-solid.fa-heart {
   @include mixin.coeur_animation;
+  cursor: pointer;
 }
 
 .menu1 {
@@ -34,15 +57,31 @@
   grid-template-columns: repeat(3, 1fr);
   padding: 0 16px;
   gap: 16px;
-  background-color: variable.$couleur_fond;
+  // background-color: variable.$couleur_fond;
   overflow: hidden;
+
   &__indiv {
+    overflow: hidden;
+    animation: apparition 1s;
+  }
+  .delai_1 {
+    animation-delay: 0s;
+  }
+  .delai_2 {
+    animation-delay: 0.2s;
+  }
+  .delai_3 {
+    animation-delay: 0.3s;
+  }
+
+  &__item {
+    display: flex;
     background-color: white;
     cursor: pointer;
     border-radius: 16px;
-    overflow: hidden;
+    margin-bottom: 16px;
+    animation-fill-mode: both;
     @include mixin.box_shadow_plats;
-
     &:hover {
       .menu1__hover {
         margin-right: 0;
@@ -52,9 +91,6 @@
         animation: check_spin 0.7s ease;
       }
     }
-  }
-  &__item {
-    display: flex;
   }
   &__prix {
     display: flex;
@@ -88,5 +124,29 @@
     background-color: white;
     padding: 5px;
     border-radius: 50px;
+  }
+  h3 {
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 20px;
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: variable.$couleur_tertiaire;
+      height: 4px;
+      width: 46px;
+      top: 26px;
+      left: 1px;
+    }
+  }
+}
+.commander {
+  display: grid;
+  place-items: center;
+  height: 200px;
+  &__btn {
+    width: 300px;
+    @include mixin.boutton;
+    @include mixin.box_shadow;
   }
 }
