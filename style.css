@@ -44,10 +44,28 @@ a {
 
 @keyframes apparition {
   0% {
-    transform: scale(0);
+    transform: translateY(50%);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 .recherche {
@@ -432,6 +450,50 @@ footer .fa-handshake-angle {
   transform: scale(1.02);
   transition: all 0.2s;
   cursor: pointer;
+}
+
+.loader-container {
+  position: fixed;
+  background: white;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: loader 2.5s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 7px solid transparent;
+  border-top-color: #9356dc;
+  animation: spin 2s linear infinite;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 7px solid transparent;
+}
+
+.loader::before {
+  inset: 10px;
+  border-top-color: #ff79da;
+  animation: spin 3s linear infinite;
+}
+
+.loader::after {
+  inset: 25px;
+  border-top-color: #99e2d0;
+  animation: spin 1.5s linear infinite;
 }
 
 @media (max-width: 768px) {

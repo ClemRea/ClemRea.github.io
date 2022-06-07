@@ -1,0 +1,46 @@
+@use "../utils/mixin.scss";
+@use "../utils/variable.scss";
+
+.loader-container {
+  position: fixed;
+  background: white;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: loader 2.5s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 7px solid transparent;
+  border-top-color: variable.$couleur_primaire;
+  animation: spin 2s linear infinite;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 7px solid transparent;
+}
+
+.loader::before {
+  inset: 10px;
+  border-top-color: variable.$couleur_secondaire;
+  animation: spin 3s linear infinite;
+}
+
+.loader::after {
+  inset: 25px;
+  border-top-color: variable.$couleur_tertiaire;
+  animation: spin 1.5s linear infinite;
+}
