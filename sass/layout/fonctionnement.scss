@@ -23,6 +23,9 @@
     &:hover {
       @include mixin.hover;
       background-color: variable.$couleur_hover;
+      & i {
+        color: variable.$couleur_primaire;
+      }
     }
     &::before {
       content: counter(etapes);

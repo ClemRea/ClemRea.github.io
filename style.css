@@ -129,6 +129,9 @@ a {
   cursor: pointer;
   background-color: rgba(206, 90, 173, 0.137);
 }
+.fonctionnement li:hover i {
+  color: #9356dc;
+}
 .fonctionnement li::before {
   content: counter(etapes);
   display: grid;
@@ -157,6 +160,11 @@ a {
   margin-bottom: 32px;
   border-radius: 16px;
   font-family: "Roboto", sans-serif;
+  padding-bottom: 40px;
+}
+.menu__titre {
+  margin-bottom: 16px;
+  padding: 35px 0 0 25px;
 }
 .menu__carte {
   display: grid;
@@ -173,15 +181,11 @@ a {
   background-color: #99e2d0;
   font-size: 15px;
   padding: 7px;
-  color: #1b6150;
+  color: #2c9c81;
   font-weight: 600;
   border-radius: 3px;
   right: 9px;
   top: 10px;
-}
-.menu h2 {
-  margin-bottom: 32px;
-  padding: 25px 0 0 25px;
 }
 .menu .restaurant {
   background-color: white;
@@ -198,6 +202,7 @@ a {
 .menu .restaurant__img {
   background-size: cover;
   height: 15rem;
+  background-position: center;
 }
 .menu .restaurant__img1 {
   background-image: url("../../images/restaurants/menu1.jpg");
@@ -503,6 +508,12 @@ footer .fa-handshake-angle {
 
   .fonctionnement ol {
     flex-direction: column;
+    padding: 16px;
+  }
+
+  .menu {
+    margin: 0 -16px -14px -16px;
+    border-radius: 0;
   }
 
   .menu__carte {

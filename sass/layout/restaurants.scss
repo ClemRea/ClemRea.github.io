@@ -6,6 +6,11 @@
   margin-bottom: 32px;
   border-radius: 16px;
   font-family: "Roboto", sans-serif;
+  padding-bottom: 40px;
+  &__titre {
+    margin-bottom: 16px;
+    padding: 35px 0 0 25px;
+  }
   &__carte {
     display: grid;
     gap: 25px;
@@ -21,17 +26,12 @@
       background-color: variable.$couleur_tertiaire;
       font-size: 15px;
       padding: 7px;
-      color: darken(variable.$couleur_tertiaire, 50%);
+      color: darken(variable.$couleur_tertiaire, 35%);
       font-weight: 600;
       border-radius: 3px;
       right: 9px;
       top: 10px;
     }
-  }
-
-  h2 {
-    margin-bottom: 32px;
-    padding: 25px 0 0 25px;
   }
 
   .restaurant {
@@ -46,6 +46,7 @@
     &__img {
       background-size: cover;
       height: 15rem;
+      background-position: center;
     }
     @for $i from 1 through 4 {
       &__img#{$i} {
