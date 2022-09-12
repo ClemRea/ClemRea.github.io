@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .accueil__main {
     padding: 16px;
   }
@@ -18,5 +18,13 @@
   }
   .menu1 {
     grid-template-columns: 1fr;
+  }
+  .logo img {
+    max-width: 200px;
+  }
+  .retour {
+    .fa-solid.fa-arrow-left {
+      left: 15px;
+    }
   }
 }

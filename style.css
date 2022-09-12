@@ -14,14 +14,14 @@ a {
   color: inherit;
 }
 
-#logo {
+.logo {
   text-align: center;
   box-shadow: 0 0px 8px grey;
   padding: 25px;
   position: relative;
 }
 
-#logo img {
+.logo img {
   width: 250px;
 }
 
@@ -277,6 +277,50 @@ footer .fa-handshake-angle {
   margin-right: 10px;
 }
 
+.loader-container {
+  position: fixed;
+  background: white;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: loader 2.5s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 7px solid transparent;
+  border-top-color: #9356dc;
+  animation: spin 2s linear infinite;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 7px solid transparent;
+}
+
+.loader::before {
+  inset: 10px;
+  border-top-color: #ff79da;
+  animation: spin 3s linear infinite;
+}
+
+.loader::after {
+  inset: 25px;
+  border-top-color: #99e2d0;
+  animation: spin 1.5s linear infinite;
+}
+
 .resto1_main {
   background-color: rgb(231, 231, 231);
 }
@@ -294,6 +338,7 @@ footer .fa-handshake-angle {
   cursor: pointer;
 }
 .retour .fa-solid.fa-arrow-left:hover {
+  cursor: pointer;
   transform: scale(1.2);
   transition: all 0.4s;
 }
@@ -458,51 +503,7 @@ footer .fa-handshake-angle {
   cursor: pointer;
 }
 
-.loader-container {
-  position: fixed;
-  background: white;
-  height: 100vh;
-  inset: 0;
-  z-index: 1;
-  animation: loader 2.5s forwards;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.8;
-}
-
-.loader {
-  display: block;
-  position: relative;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 7px solid transparent;
-  border-top-color: #9356dc;
-  animation: spin 2s linear infinite;
-}
-
-.loader::before,
-.loader::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  border: 7px solid transparent;
-}
-
-.loader::before {
-  inset: 10px;
-  border-top-color: #ff79da;
-  animation: spin 3s linear infinite;
-}
-
-.loader::after {
-  inset: 25px;
-  border-top-color: #99e2d0;
-  animation: spin 1.5s linear infinite;
-}
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .accueil__main {
     padding: 16px;
   }
@@ -523,6 +524,14 @@ footer .fa-handshake-angle {
 
   .menu1 {
     grid-template-columns: 1fr;
+  }
+
+  .logo img {
+    max-width: 200px;
+  }
+
+  .retour .fa-solid.fa-arrow-left {
+    left: 15px;
   }
 }
 
