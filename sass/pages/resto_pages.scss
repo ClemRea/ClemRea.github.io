@@ -54,7 +54,7 @@
   cursor: pointer;
 }
 
-.menu1 {
+.menu-pages {
   font-family: "Roboto", sans-serif;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -86,7 +86,7 @@
     animation-fill-mode: both;
     @include mixin.box_shadow_plats;
     &:hover {
-      .menu1__hover {
+      .menu-pages__hover {
         margin-right: 0;
       }
       .fa-solid.fa-check {

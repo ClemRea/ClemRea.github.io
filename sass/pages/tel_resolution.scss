@@ -16,7 +16,7 @@
   .menu__carte {
     grid-template-columns: 1fr;
   }
-  .menu1 {
+  .menu-pages {
     grid-template-columns: 1fr;
   }
   .logo img {
@@ -26,5 +26,8 @@
     .fa-solid.fa-arrow-left {
       left: 15px;
     }
+  }
+  .resto_titre {
+    font-size: 25px;
   }
 }

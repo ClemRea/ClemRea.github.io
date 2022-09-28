@@ -384,7 +384,7 @@ footer .fa-handshake-angle {
   transform: scale(1.1);
 }
 
-.menu1 {
+.menu-pages {
   font-family: "Roboto", sans-serif;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -392,20 +392,20 @@ footer .fa-handshake-angle {
   gap: 16px;
   overflow: hidden;
 }
-.menu1__indiv {
+.menu-pages__indiv {
   overflow: hidden;
   animation: apparition 1s;
 }
-.menu1 .delai_1 {
+.menu-pages .delai_1 {
   animation-delay: 0s;
 }
-.menu1 .delai_2 {
+.menu-pages .delai_2 {
   animation-delay: 0.2s;
 }
-.menu1 .delai_3 {
+.menu-pages .delai_3 {
   animation-delay: 0.3s;
 }
-.menu1__item {
+.menu-pages__item {
   display: flex;
   background-color: white;
   cursor: pointer;
@@ -414,10 +414,10 @@ footer .fa-handshake-angle {
   animation-fill-mode: both;
   box-shadow: 2px 3px 5px -4px black;
 }
-.menu1__item:hover .menu1__hover {
+.menu-pages__item:hover .menu-pages__hover {
   margin-right: 0;
 }
-.menu1__item:hover .fa-solid.fa-check {
+.menu-pages__item:hover .fa-solid.fa-check {
   animation: check_spin 0.7s ease;
 }
 @keyframes check_spin {
@@ -428,26 +428,26 @@ footer .fa-handshake-angle {
     transform: rotate(0deg);
   }
 }
-.menu1__prix {
+.menu-pages__prix {
   display: flex;
   align-items: flex-end;
   margin-left: auto;
   font-weight: 500;
   padding: 16px;
 }
-.menu1__description {
+.menu-pages__description {
   padding: 16px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu1__description h4,
-.menu1__description p {
+.menu-pages__description h4,
+.menu-pages__description p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu1__hover {
+.menu-pages__hover {
   display: grid;
   place-items: center;
   background-color: #99e2d0;
@@ -457,18 +457,18 @@ footer .fa-handshake-angle {
   transition: all 0.5s;
   flex-shrink: 0;
 }
-.menu1 .fa-solid.fa-check {
+.menu-pages .fa-solid.fa-check {
   color: #99e2d0;
   background-color: white;
   padding: 5px;
   border-radius: 50px;
 }
-.menu1 h3 {
+.menu-pages h3 {
   font-weight: 400;
   position: relative;
   margin-bottom: 20px;
 }
-.menu1 h3::after {
+.menu-pages h3::after {
   content: "";
   position: absolute;
   background-color: #99e2d0;
@@ -522,7 +522,7 @@ footer .fa-handshake-angle {
     grid-template-columns: 1fr;
   }
 
-  .menu1 {
+  .menu-pages {
     grid-template-columns: 1fr;
   }
 
@@ -532,6 +532,10 @@ footer .fa-handshake-angle {
 
   .retour .fa-solid.fa-arrow-left {
     left: 15px;
+  }
+
+  .resto_titre {
+    font-size: 25px;
   }
 }
 
