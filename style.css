@@ -14,6 +14,10 @@ a {
   color: inherit;
 }
 
+h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
 .logo {
   text-align: center;
   box-shadow: 0 0px 8px grey;
@@ -96,9 +100,8 @@ a {
   box-shadow: 0 3px 16px -4px black;
 }
 .btn_explorez:hover {
-  opacity: 0.95;
-  transform: scale(1.02);
-  transition: all 0.2s;
+  box-shadow: 0 3px 16px 0px black;
+  filter: brightness(1.18);
   cursor: pointer;
 }
 
@@ -200,21 +203,9 @@ a {
   cursor: pointer;
 }
 .menu .restaurant__img {
-  background-size: cover;
   height: 15rem;
-  background-position: center;
-}
-.menu .restaurant__img1 {
-  background-image: url("../../images/restaurants/menu1.jpg");
-}
-.menu .restaurant__img2 {
-  background-image: url("../../images/restaurants/menu2.jpg");
-}
-.menu .restaurant__img3 {
-  background-image: url("../../images/restaurants/menu3.jpg");
-}
-.menu .restaurant__img4 {
-  background-image: url("../../images/restaurants/menu4.jpg");
+  object-fit: cover;
+  width: 100%;
 }
 .menu .restaurant__description {
   position: relative;
@@ -241,7 +232,7 @@ a {
   background-image: linear-gradient(#9356dc, #ff79da);
   opacity: 0;
   -webkit-background-clip: text;
-  transition: ease-out 0.2s;
+  transition: ease-out 0.5s;
   position: absolute;
   font-size: 26px;
 }
@@ -374,7 +365,7 @@ footer .fa-handshake-angle {
   background-image: linear-gradient(#9356dc, #ff79da);
   opacity: 0;
   -webkit-background-clip: text;
-  transition: ease-out 0.2s;
+  transition: ease-out 0.5s;
   position: absolute;
   font-size: 26px;
   cursor: pointer;
@@ -422,7 +413,7 @@ footer .fa-handshake-angle {
 }
 @keyframes check_spin {
   0% {
-    transform: rotate(-270deg);
+    transform: rotate(-360deg);
   }
   100% {
     transform: rotate(0deg);
@@ -497,9 +488,8 @@ footer .fa-handshake-angle {
   box-shadow: 0 3px 16px -4px black;
 }
 .commander__btn:hover {
-  opacity: 0.95;
-  transform: scale(1.02);
-  transition: all 0.2s;
+  box-shadow: 0 3px 16px 0px black;
+  filter: brightness(1.18);
   cursor: pointer;
 }
 

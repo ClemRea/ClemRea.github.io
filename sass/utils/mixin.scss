@@ -22,7 +22,7 @@
   );
   opacity: 0;
   -webkit-background-clip: text;
-  transition: ease-out 0.2s;
+  transition: ease-out 0.5s;
   position: absolute;
   font-size: 26px;
   &:hover {
@@ -34,7 +34,7 @@
 @mixin check_spin {
   @keyframes check_spin {
     0% {
-      transform: rotate(-270deg);
+      transform: rotate(-360deg);
     }
     100% {
       transform: rotate(0deg);
@@ -59,9 +59,8 @@
   border: none;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
   &:hover {
-    opacity: 0.95;
-    transform: scale(1.02);
-    transition: all 0.2s;
+    box-shadow: 0 3px 16px 0px black;
+    filter: brightness(1.18);
     cursor: pointer;
   }
 }

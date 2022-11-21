@@ -44,14 +44,9 @@
       @include mixin.hover;
     }
     &__img {
-      background-size: cover;
       height: 15rem;
-      background-position: center;
-    }
-    @for $i from 1 through 4 {
-      &__img#{$i} {
-        background-image: url("../../images/restaurants/menu#{$i}.jpg");
-      }
+      object-fit: cover;
+      width: 100%;
     }
     &__description {
       position: relative;
