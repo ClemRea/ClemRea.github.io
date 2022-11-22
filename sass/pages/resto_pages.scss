@@ -64,7 +64,7 @@
 
   &__indiv {
     overflow: hidden;
-    animation: apparition 1s;
+    animation: apparition 1.5s;
   }
   .delai_1 {
     animation-delay: 0s;
@@ -105,7 +105,11 @@
     padding: 16px;
     @include mixin.overflow;
 
-    h4,
+    h2 {
+      font-size: 17px;
+    }
+
+    h2,
     p {
       @include mixin.overflow;
     }
@@ -127,10 +131,13 @@
     padding: 5px;
     border-radius: 50px;
   }
-  h3 {
+  .entrees,
+  .plats,
+  .desserts {
     font-weight: 400;
     position: relative;
     margin-bottom: 20px;
+    font-size: 20px;
     &::after {
       content: "";
       position: absolute;

@@ -14,10 +14,6 @@ a {
   color: inherit;
 }
 
-h1 {
-  font-family: "Shrikhand", sans-serif;
-}
-
 .logo {
   text-align: center;
   box-shadow: 0 0px 8px grey;
@@ -48,7 +44,7 @@ h1 {
 
 @keyframes apparition {
   0% {
-    transform: translateY(50%);
+    transform: translateY(40%);
     opacity: 0;
   }
   100% {
@@ -76,10 +72,11 @@ h1 {
   font-family: "Roboto", sans-serif;
   text-align: center;
 }
-.recherche h2 {
+.recherche h1 {
   margin-top: 40px;
   margin-bottom: 20px;
   font-size: 40px;
+  font-family: "Roboto", sans-serif;
 }
 .recherche p {
   font-size: 18px;
@@ -385,7 +382,7 @@ footer .fa-handshake-angle {
 }
 .menu-pages__indiv {
   overflow: hidden;
-  animation: apparition 1s;
+  animation: apparition 1.5s;
 }
 .menu-pages .delai_1 {
   animation-delay: 0s;
@@ -432,7 +429,10 @@ footer .fa-handshake-angle {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu-pages__description h4,
+.menu-pages__description h2 {
+  font-size: 17px;
+}
+.menu-pages__description h2,
 .menu-pages__description p {
   overflow: hidden;
   white-space: nowrap;
@@ -454,12 +454,17 @@ footer .fa-handshake-angle {
   padding: 5px;
   border-radius: 50px;
 }
-.menu-pages h3 {
+.menu-pages .entrees,
+.menu-pages .plats,
+.menu-pages .desserts {
   font-weight: 400;
   position: relative;
   margin-bottom: 20px;
+  font-size: 20px;
 }
-.menu-pages h3::after {
+.menu-pages .entrees::after,
+.menu-pages .plats::after,
+.menu-pages .desserts::after {
   content: "";
   position: absolute;
   background-color: #99e2d0;
